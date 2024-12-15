@@ -17,7 +17,7 @@ const StudentDetailsPage = () => {
 
   return (
     <div>
-      <h2>Edit Student Details</h2>
+      <h2>&nbsp;&nbsp;&nbsp;&nbsp;Edit Student Details</h2>
       {student ? (
         <StudentForm student={student} onClose={handleClose} />
       ) : (

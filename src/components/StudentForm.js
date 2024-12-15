@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addStudent, updateStudent } from '../features/students/studentSlice';
 
-const StudentForm = ({ student, onClose }) => {
+const StudentForm = ({ student }) => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     name: '',
@@ -22,7 +22,7 @@ const StudentForm = ({ student, onClose }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const validateForm = () => {
@@ -38,9 +38,10 @@ const StudentForm = ({ student, onClose }) => {
       } else {
         dispatch(addStudent({ ...formData, id: Date.now() }));
       }
-      onClose();
+      alert('Student data submitted successfully!'); // Inform the user
+      setFormData({ name: '', email: '', age: '', class: '', address: '', phone: '' }); // Reset form
     } else {
-      alert("Please fill in all fields correctly."); // Simple alert for validation
+      alert('Please fill in all fields correctly.'); // Simple alert for validation
     }
   };
 
@@ -53,7 +54,6 @@ const StudentForm = ({ student, onClose }) => {
       <input name="address" value={formData.address} onChange={handleChange} placeholder="Address" required />
       <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required type="tel" />
       <button type="submit">Submit</button>
-      <button type="button" onClick={onClose}>Cancel</button>
     </form>
   );
 };

@@ -1,13 +1,11 @@
 // src/pages/RegisterStudent.js
-import React, { useState } from 'react';
+import React from 'react';
 import StudentForm from '../components/StudentForm';
 
 const RegisterStudent = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
   return (
     <div>
-      {isOpen && <StudentForm onClose={() => setIsOpen(false)} />}
+      <StudentForm /> {/* Always render the StudentForm */}
     </div>
   );
 };

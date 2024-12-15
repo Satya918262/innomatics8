@@ -4,7 +4,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const studentSlice = createSlice({
   name: 'students',
   initialState: {
-    list: [],
+    list: [
+      { id: 1, name: 'John Doe', email: 'johndoe@example.com', class: '10th Grade' },
+      { id: 2, name: 'Jane Smith', email: 'janesmith@example.com', class: '11th Grade' },
+      { id: 3, name: 'Emily Johnson', email: 'emilyj@example.com', class: '12th Grade' },
+      { id: 4, name: 'Michael Brown', email: 'michaelb@example.com', class: '10th Grade' },
+    ], // Default data
   },
   reducers: {
     addStudent: (state, action) => {

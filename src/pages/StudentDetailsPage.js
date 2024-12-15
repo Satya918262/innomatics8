@@ -10,7 +10,7 @@ const StudentDetailsPage = () => {
 
   return (
     <div>
-      <h1>Student Details</h1>
+      <h1>&nbsp;&nbsp;&nbsp;Student Details</h1>
       <StudentDetails student={student} />
     </div>
   );

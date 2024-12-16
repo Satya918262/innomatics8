@@ -5,11 +5,11 @@ const studentSlice = createSlice({
   name: 'students',
   initialState: {
     list: [
-      { id: 1, name: 'John Doe', email: 'johndoe@example.com', class: '10th Grade' },
-      { id: 2, name: 'Jane Smith', email: 'janesmith@example.com', class: '11th Grade' },
-      { id: 3, name: 'Emily Johnson', email: 'emilyj@example.com', class: '12th Grade' },
-      { id: 4, name: 'Michael Brown', email: 'michaelb@example.com', class: '10th Grade' },
-    ], // Default data
+      { id: 1, name: 'Alice Brown', email: 'alicebrown@example.com', class: '9th Grade' },
+      { id: 2, name: 'David Wilson', email: 'davidwilson@example.com', class: '10th Grade' },
+      { id: 3, name: 'Sophia Davis', email: 'sophiadavis@example.com', class: '11th Grade' },
+      { id: 4, name: 'James Taylor', email: 'jamestaylor@example.com', class: '12th Grade' },
+    ], // Updated data
   },
   reducers: {
     addStudent: (state, action) => {

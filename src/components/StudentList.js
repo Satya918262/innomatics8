@@ -13,7 +13,7 @@ const StudentList = () => {
     const [sortOrder, setSortOrder] = useState('name'); // Default sort by name        
 
     // Example classes to filter by     
-    const classes = ['10th Grade', '11th Grade', '12th Grade'];        
+    const classes = ['9th Grade','10th Grade', '11th Grade', '12th Grade'];        
 
     const filteredStudents = students       
         .filter(student => {         
@@ -36,7 +36,7 @@ const StudentList = () => {
     };        
 
     return (       
-        <div style={{ padding: '0 20px' }}> {/* Added left and right padding */}                  
+        <div style={{ padding: '0 50px' }}> {/* Added left and right padding */}                  
             <input           
                 type="text"           
                 placeholder="Search by name"           
